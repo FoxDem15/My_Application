@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Итого решено примеров"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000" />/>
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ваш вопрос здесь"
+        android:textSize="18sp"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000" />/>
+
+    <TextView
+        android:id="@+id/totalCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="18sp"
+        android:layout_below="@id/questionTextView"
+    android:layout_centerHorizontal="true"
+        android:textColor="#000000" />/>
+
+    <TextView
+        android:id="@+id/statsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00%"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_below="@id/totalCountTextView"
+    android:layout_centerHorizontal="true"
+        android:textColor="#000000" />/>
+
+    <LinearLayout
+        android:id="@+id/statisticsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statsTextView"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/correctLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Правильные:"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:id="@+id/correctCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#000000" />/>
+
+        <TextView
+            android:id="@+id/incorrectLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Неправильные:"
+            android:textStyle="bold"
+            android:textColor="#000000" />/>
+
+        <TextView
+            android:id="@+id/incorrectCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#000000" />/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/startButton"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF"
+    android:textSize = "16sp"
+        android:layout_width = "match_parent"
+    android:layout_height = "60dp"
+    android:text = "Старт"
+    android:layout_below="@id/statisticsLayout"/>
+
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="376dp"
+        android:layout_height="58dp"
+        android:layout_below="@id/startButton"
+        android:background="#6200EE"
+        android:nestedScrollingEnabled="false"
+        android:onClick="checkAnswer"
+        android:soundEffectsEnabled="false"
+        android:text="Проверить"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+    </RelativeLayout>
